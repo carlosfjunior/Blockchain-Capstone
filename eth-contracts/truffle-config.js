@@ -22,7 +22,7 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const infuraKey = "009597eb4c7440699cd793bfdd27874a";
 //
 const fs = require('fs');
-const mnemonic = fs.readFileSync(".secret").toString().trim();
+const mnemonic = "gap connect jealous champion video protect half concert warrior wing raven armed";
 
 module.exports = {
   /**
