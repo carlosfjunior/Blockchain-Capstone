@@ -7910,8 +7910,8 @@
         }
       },
       "links": {},
-      "address": "0x4E502e676A060983e5CF1a1f91B114fD17F77E30",
-      "transactionHash": "0x2079727f98d90fb8199f2e200b581222818d1a5806e2f23422d45fa526ecf405"
+      "address": "0x656c14BEeC0F661B5EB179D210F125d8171010B8",
+      "transactionHash": "0x5f1d827134237dcee194685de1e74b666f2c5d81368a90b3f56e30fff63d7a4d"
     },
     "1569209955071": {
       "events": {
@@ -7950,12 +7950,12 @@
         }
       },
       "links": {},
-      "address": "0xA88A2A5F85aEdbeCCb7A3cd2cb61C6b7ecF82370",
-      "transactionHash": "0xd5071c4e604cf76c20204354315449878d432f9b8ec5d35239012f4982a9198d"
+      "address": "0x970EA02B56994F5cB663426a07110C01b8F0a8D9",
+      "transactionHash": "0x60977d1faee6abe412dbbb617b8025d25085c620f8d967167da1ba31ecd904cc"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-17T02:27:10.657Z",
+  "updatedAt": "2019-10-17T03:09:38.513Z",
   "devdoc": {
     "methods": {}
   },

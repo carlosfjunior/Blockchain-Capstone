@@ -8538,12 +8538,12 @@
           "inputs": [
             {
               "indexed": false,
-              "name": "tokenId",
+              "name": "tokenid",
               "type": "uint256"
             },
             {
               "indexed": false,
-              "name": "owner",
+              "name": "to",
               "type": "address"
             }
           ],
@@ -8625,7 +8625,7 @@
           "inputs": [
             {
               "indexed": false,
-              "name": "newOwner",
+              "name": "from",
               "type": "address"
             }
           ],
@@ -8638,7 +8638,7 @@
           "inputs": [
             {
               "indexed": false,
-              "name": "newOwner",
+              "name": "from",
               "type": "address"
             }
           ],
@@ -8658,11 +8658,24 @@
           "name": "OwnerChanged",
           "type": "event",
           "signature": "0xa2ea9883a321a3e97b8266c2b078bfeec6d50c711ed71f874a90d500ae2eaf36"
+        },
+        "0x04dba622d284ed0014ee4b9a6a68386be1a4c08a4913ae272de89199cc686163": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x04dba622d284ed0014ee4b9a6a68386be1a4c08a4913ae272de89199cc686163"
         }
       },
       "links": {},
-      "address": "0xC5054a424087C9f996Ec4BFb835245C791ecC01c",
-      "transactionHash": "0xa0db576cc055bd238cb81252f3f6086d32a5a853104262bca6ff10e96af32e60"
+      "address": "0x79dD1D62069c7c46AcDDe1320aE1EEe64811eEbb",
+      "transactionHash": "0x7fc7bb795550db2ff505267273add911060a5436e4ab2bc312e5f702008b4b01"
     },
     "1569209955071": {
       "events": {
@@ -8927,12 +8940,12 @@
         }
       },
       "links": {},
-      "address": "0xDB295ca6a1bf9Cc256e370BDbF9eA5bD866164a0",
-      "transactionHash": "0x5f80d6557adf09bd6d72c7acdd2efc46a121e04fe8f9e7b9ebb0ed6611dc6858"
+      "address": "0xC1DbA5AD5F5B6E3a8B4a9A5d5C1d8a698cc42328",
+      "transactionHash": "0x84d0bb25e89c946ac611ab2997a02f5c9de10f6ba70a461889fd5b26418371ce"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-17T02:27:10.676Z",
+  "updatedAt": "2019-10-17T03:09:38.533Z",
   "devdoc": {
     "methods": {
       "isApprovedForAll(address,address)": {
