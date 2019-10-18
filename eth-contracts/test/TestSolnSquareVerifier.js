@@ -17,28 +17,22 @@ contract('TestSolnSquareVerifier', accounts => {
     })
 
      it('if a new solution can be added for contract',async function(){
-        let canAdd=true;
-        try{
-        await this.contract.CanMintToken(account_two,2,correctproof.proof.A,correctproof.proof.A_p,
-        correctproof.proof.B,correctproof.proof.B_p,correctproof.proof.C,correctproof.proof.C_p,correctproof.proof.H,
-        correctproof.proof.K,correctproof.input,{from:account_one});
-        }
-        catch(e)
-        {
-            canAdd = false;
-        }
-        assert.equal(canAdd,true,"Solution cannot be added");
+        let result = await this.contract.mintToken(account_two,2,correctproof.proof.A,correctproof.proof.A_p,
+            correctproof.proof.B,correctproof.proof.B_p,correctproof.proof.C,correctproof.proof.C_p,correctproof.proof.H,
+            correctproof.proof.K,correctproof.input,{from:account_one});
+    
+            assert.equal(result.logs[0].event, "SolutionAdded", "event was not emitted");
     }) 
     
     it('if a repeated solution can be added for contract',async function(){
         let canAdd=true;
-       await this.contract.CanMintToken(account_two,2,correctproof.proof.A,correctproof.proof.A_p,
+       await this.contract.mintToken(account_two,2,correctproof.proof.A,correctproof.proof.A_p,
             correctproof.proof.B,correctproof.proof.B_p,correctproof.proof.C,correctproof.proof.C_p,correctproof.proof.H,
             correctproof.proof.K,correctproof.input,{from:account_one});
 
 
         try{
-            await this.contract.CanMintToken(account_two,3,correctproof.proof.A,correctproof.proof.A_p,
+            await this.contract.mintToken(account_two,3,correctproof.proof.A,correctproof.proof.A_p,
             correctproof.proof.B,correctproof.proof.B_p,correctproof.proof.C,correctproof.proof.C_p,correctproof.proof.H,
             correctproof.proof.K,correctproof.input,{from:account_one});
         }
@@ -60,11 +54,11 @@ it('if an ERC721 token can be minted for contract',async function(){
    catch(e) {
        canMint = false;
    }
-     assert.equal(canMint,true,"cannot mint  a token");
+     assert.equal(canMint,true,"cannot mint a token");
 })
 
 // Test verification with incorrect proof
-it('if an ERC721 token can be minted for contract with incorrect proof',async function(){
+it('if an ERC721 token cannot be minted for contract with incorrect proof',async function(){
     let canMint = true;
     input=[3,1]
    try{
@@ -73,7 +67,7 @@ it('if an ERC721 token can be minted for contract with incorrect proof',async fu
    catch(e) {
        canMint = false;
    }
-     assert.equal(canMint,false,"can mint  a token with incorrect proof");
+     assert.equal(canMint,false,"can mint a token with incorrect proof");
 })
 
 });
