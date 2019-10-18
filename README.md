@@ -1,6 +1,6 @@
 # Udacity Blockchain Capstone
 
-The Capstone is the final project for Udacity's Blockchain Developer Nanodegree course.
+The Real Estate Marketplace is the final project for Udacity's Blockchain Developer Nanodegree course.
 
 ## Install
 
